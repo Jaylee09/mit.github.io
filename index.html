@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Monthsary Rose</title>
+    <style>
+        body {
+            background-color: #fce4ec;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .rose-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .rose-image {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: #e91e63;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #555;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .gift-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #e91e63;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+
+        .gift-button:hover {
+            background-color: #d81b60;
+        }
+
+        .heart-animation {
+            font-size: 3em;
+            color: #ff4081;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Hidden message styling */
+        .message-box {
+            display: none;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #fff3e0;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            font-size: 1.2em;
+            color: #444;
+        }
+
+        .message-box p {
+            margin-bottom: 10px;
+        }
+
+        /* Message fade-in animation */
+        .fade-in {
+            animation: fadeIn 2s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="rose-container">
+        <h1>Happy Monthsary, <br> Bii!</h1>
+        <p>Here's a special rose just for you!</p>
+        <img class="rose-image" src="https://i.pinimg.com/564x/3d/b2/25/3db225682b4c7b70a2e5384555917155.jpg" alt="Monthsary Rose">
+        <p><span class="heart-animation">❤️</span></p>
+        <button class="gift-button" onclick="showMessage()">Receive My Gift</button>
+
+        <div id="messageBox" class="message-box">
+            <p>Dear Bii,</p>
+            <p>Every moment with you feels like a beautiful dream, and on this monthsary, I want you to know how much you mean to me.</p>
+            <p>Your love lights up my world in ways I never thought possible. I am incredibly lucky to have you by my side.</p>
+            <p>With all my heart, happy monthsary, my love! ❤️</p>
+        </div>
+    </div>
+
+    <script>
+        function showMessage() {
+            var messageBox = document.getElementById("messageBox");
+            messageBox.style.display = "block";
+            messageBox.classList.add("fade-in");
+        }
+    </script>
+
+</body>
+</html>
